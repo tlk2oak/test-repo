@@ -7,6 +7,10 @@ app = Flask(__name__)
 def home():
   return 'Welcome to home'
 
+@app.route('/open')
+def open():
+  return 'Hello! Hello!'
+
 @app.errorhandler(404)
 def page_not_found(e):
     return 'sorry, page does not exist', 400
